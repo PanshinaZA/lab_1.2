@@ -313,14 +313,14 @@ p = float(input("На сколько увеличивает пробег (%) = "
 
 total = s
 while n < 10:
-  s = round((s + (s * (1/p))), 1)
-  total = round((total + s), 1)
+  s *= (p / 100) + 1
+  total = total + s
   n += 1
-  print(f"Пробег за {n}-й день: {s} км.")
+  print(f"Пробег за {n}-й день: {round(s,1)} км.")
 
-print(f"Суммарный пробег: {total} км.")
+print(f"Суммарный пробег: {round(total, 1)} км.")
 ```
-<img width="691" height="270" alt="image" src="https://github.com/user-attachments/assets/57babb46-474a-440c-aa52-e8370aa39c72" />
+<img width="927" height="268" alt="image" src="https://github.com/user-attachments/assets/24f72693-0921-466e-9d99-a7a51eaf46dd" />
 
 ### 15. Известна масса каждого предмета в кг., загружаемого в грузовик. Определить, возможна ли перевозка груза, если грузоподъемность грузовика равна p кг
 ```
